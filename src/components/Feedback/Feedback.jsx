@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+const Feedback = ({ onGood, onNeutral, onBad }) => (
+  <div>
+    <span>Please leave feedback</span>
+    <button type="button" onClick={onGood}>
+      Good
+    </button>
+    <button type="button" onClick={onNeutral}>
+      Neutral
+    </button>
+    <button type="button" onClick={onBad}>
+      Bad
+    </button>
+  </div>
+);
 
-export default class Feedback extends Component {
-  render() {
-    return (
-      <div>
-        <span>Please leave feedback</span>
-        <button type="button" onClick={() => console.log('Good')}>
-          Good
-        </button>
-        <button type="button" onClick={() => console.log('Neutral')}>
-          Neutral
-        </button>
-        <button type="button" onClick={() => console.log('Bad')}>
-          Bad
-        </button>
-      </div>
-    );
-  }
-}
+export default Feedback;

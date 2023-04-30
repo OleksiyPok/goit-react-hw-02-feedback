@@ -14,6 +14,14 @@ export default class App extends Component {
     this.setState(prevState => ({ good: prevState.good + 1 }));
   };
 
+  neutralIncrement = () => {
+    this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
+  };
+
+  badIncrement = () => {
+    this.setState(prevState => ({ bad: prevState.bad + 1 }));
+  };
+
   render() {
     return (
       <div
@@ -27,7 +35,11 @@ export default class App extends Component {
           color: '#010101',
         }}
       >
-        <Feedback />
+        <Feedback
+          onGood={this.goodIncrement}
+          onNeutral={this.neutralIncrement}
+          onBad={this.badIncrement}
+        />
         <Statistics
           goodState={this.state.good}
           neutralState={this.state.neutral}
