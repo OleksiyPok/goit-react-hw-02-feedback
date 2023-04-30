@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+const Statistics = ({ goodState, neutralState, badState }) => (
+  <div>
+    <span>Statistics</span>
+    <ul>
+      <li>Good: {goodState}</li>
+      <li>Neutral: {neutralState}</li>
+      <li>Bad: {badState}</li>
+    </ul>
+  </div>
+);
 
-export default class Statistics extends Component {
-  render() {
-    return (
-      <div>
-        <span>Statistics</span>
-        <ul>
-          <li>Good</li>
-          <li>Neutral</li>
-          <li>Bad</li>
-        </ul>
-      </div>
-    );
-  }
-}
+export default Statistics;
