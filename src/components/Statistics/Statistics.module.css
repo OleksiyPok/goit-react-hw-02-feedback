@@ -1,0 +1,14 @@
+.Statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.stateList {
+  list-style: none;
+}
+
+.stateItem {
+  font-size: 25px;
+}

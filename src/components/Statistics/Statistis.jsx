@@ -1,10 +1,13 @@
+import css from './Statistics.module.css';
+
 const Statistics = ({ goodState, neutralState, badState }) => (
-  <div>
+  <div className={css.Statistics}>
     <span>Statistics</span>
-    <ul>
-      <li>Good: {goodState}</li>
-      <li>Neutral: {neutralState}</li>
-      <li>Bad: {badState}</li>
+
+    <ul className={css.stateList}>
+      <li className={css.stateItem}>Good: {goodState}</li>
+      <li className={css.stateItem}>Neutral: {neutralState}</li>
+      <li className={css.stateItem}>Bad: {badState}</li>
     </ul>
   </div>
 );

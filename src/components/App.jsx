@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import Feedback from 'components/Feedback';
+import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
 
 export default class App extends Component {
@@ -22,23 +22,27 @@ export default class App extends Component {
     this.setState(prevState => ({ bad: prevState.bad + 1 }));
   };
 
+  countPositiveFeedbackPercentage = () => {};
+
+  countTotalFeedback = () => {};
+
   render() {
     return (
       <div
         style={{
           height: '100vh',
           display: 'flex',
-          flexWrap: 'wrap',
+          flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           fontSize: 40,
           color: '#010101',
         }}
       >
-        <Feedback
-          onGood={this.goodIncrement}
-          onNeutral={this.neutralIncrement}
-          onBad={this.badIncrement}
+        <FeedbackOptions
+          goodIncrement={this.goodIncrement}
+          neutralIncrement={this.neutralIncrement}
+          badIncrement={this.badIncrement}
         />
         <Statistics
           goodState={this.state.good}
