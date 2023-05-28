@@ -1,8 +1,9 @@
 import { Component } from 'react';
 
+import Section from 'components/Section';
+
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
-// import Section from 'components/Section';
 
 export default class App extends Component {
   state = {
@@ -29,34 +30,29 @@ export default class App extends Component {
 
   render() {
     const options = Object.keys(this.state);
-    console.log('options:', options);
-
     const totalFeedback = this.countTotalFeedback();
     const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
 
     return (
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
-        <FeedbackOptions
-          options={options}
-          onLeaveFeedback={this.handleFeedback}
-        />
-        <Statistics
-          Good={this.state.Good}
-          Neutral={this.state.Neutral}
-          Bad={this.state.Bad}
-          total={totalFeedback}
-          positivPercentage={positiveFeedbackPercentage}
-        />
+      <div>
+        <h1>Feedback form</h1>
+
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={options}
+            onLeaveFeedback={this.handleFeedback}
+          />
+        </Section>
+
+        <Section title="Statistics">
+          <Statistics
+            Good={this.state.Good}
+            Neutral={this.state.Neutral}
+            Bad={this.state.Bad}
+            total={totalFeedback}
+            positivPercentage={positiveFeedbackPercentage}
+          />
+        </Section>
       </div>
     );
   }
