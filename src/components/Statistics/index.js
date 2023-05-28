@@ -1,4 +1,4 @@
-import Statistis from './Statistis';
-export default Statistis;
+import Statistics from './Statistics';
+export default Statistics;
 
-// export * from './Statistis';
+// export * from './Statistics';
