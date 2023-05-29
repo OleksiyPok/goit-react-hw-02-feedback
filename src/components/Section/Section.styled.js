@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-bottom: 20px;
-  width: 500px;
+  max-width: 400px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -12,4 +13,5 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   color: darkblue;
+  text-align: center;
 `;
