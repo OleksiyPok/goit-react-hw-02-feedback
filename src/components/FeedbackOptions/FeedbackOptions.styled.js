@@ -7,6 +7,7 @@ export const ButtonsContainer = styled.div`
 
 export const Button = styled.button`
   min-width: 100px;
-  border: solid 1px;
+  border: solid 1px darkblue;
   border-radius: 4px;
+  /* color: darkblue; */
 `;
