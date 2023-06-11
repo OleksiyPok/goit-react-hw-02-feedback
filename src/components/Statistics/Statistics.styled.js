@@ -7,4 +7,5 @@ export const StatisticsList = styled.ul`
 
 export const StatisticsItem = styled.li`
   font-size: 20px;
+  text-transform: capitalize;
 `;

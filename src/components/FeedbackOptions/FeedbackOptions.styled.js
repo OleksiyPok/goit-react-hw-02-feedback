@@ -12,4 +12,5 @@ export const Button = styled.button`
   border: solid 1px darkblue;
   border-radius: 4px;
   cursor: pointer;
+  text-transform: capitalize;
 `;

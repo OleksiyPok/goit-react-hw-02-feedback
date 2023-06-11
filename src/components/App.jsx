@@ -7,9 +7,9 @@ import Notification from 'components/Notification';
 
 export default class App extends Component {
   state = {
-    Good: 0,
-    Neutral: 0,
-    Bad: 0,
+    good: 0,
+    neutral: 0,
+    bad: 0,
   };
 
   handleFeedback = option => {
@@ -17,14 +17,14 @@ export default class App extends Component {
   };
 
   countTotalFeedback = () => {
-    const { Good, Neutral, Bad } = this.state;
-    return Good + Neutral + Bad;
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
   };
 
   countPositiveFeedbackPercentage = () => {
     const total = this.countTotalFeedback(this.state);
-    const { Good } = this.state;
-    const result = Math.round((Good / total) * 100);
+    const { good } = this.state;
+    const result = Math.round((good / total) * 100);
     return !result ? 0 : result;
   };
 
@@ -45,9 +45,9 @@ export default class App extends Component {
         {isFeedback ? (
           <Section title="Statistics">
             <Statistics
-              Good={this.state.Good}
-              Neutral={this.state.Neutral}
-              Bad={this.state.Bad}
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
               total={totalFeedback}
               positivPercentage={positiveFeedbackPercentage}
             />
