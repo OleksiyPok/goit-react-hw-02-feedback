@@ -4,8 +4,8 @@ import { Container, Title } from './Section.styled';
 
 const Section = ({ title, children }) => (
   <Container>
-    <Title>{title}</Title>
-    {children}
+    {title && <Title>{title}</Title>}
+    {children && <children>{children}</children>}
   </Container>
 );
 
